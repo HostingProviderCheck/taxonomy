@@ -1,0 +1,9 @@
+{
+  "name": "Node.js & TypeScript with MySQL",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "devcontainer",  // Connects to the Node.js service from the docker-compose.yml file
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "forwardPorts": [3000],  // Forward your app's port (modify if your app runs on a different port)
+  "postCreateCommand": "pnpm install",  // Assuming you are using pnpm for dependency management
+  "shutdownAction": "stopCompose"
+}
